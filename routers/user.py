@@ -19,3 +19,4 @@ def register(request: UserBase, db: Session = Depends(get_db)):
         return new_user
     except:
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Invalid data")
+    
