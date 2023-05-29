@@ -54,9 +54,9 @@ def get_all_posts(db: Session = Depends(get_db)):
 
 @router.post("/image")
 def upload_image(
-    image: UploadFile = File(...),
+    image: UploadFile = File(...), current_user: UserAuth = Depends(get_current_user)
 ):
-    print(image)
+    print("image", image)
     image_name: Optional[str] = image.filename
     timestamp: str = datetime.now().strftime("%Y%m%d%H%M%S")
     # filename: str = os.path.join(timestamp, image_name or "")
@@ -70,7 +70,7 @@ def upload_image(
     return {"filename": path}
 
 
-@router.get("/delete/{id}")
+@router.delete("/delete/{id}")
 def delete_post(
     id: int,
     db: Session = Depends(get_db),

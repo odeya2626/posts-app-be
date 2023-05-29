@@ -1,3 +1,5 @@
+import re
+
 from db.models import User
 from fastapi import HTTPException, status
 from passlib.context import CryptContext
@@ -21,8 +23,20 @@ def verify(
     )
 
 
+def isvalidEmail(email):
+    pattern = "^\S+@\S+\.\S+$"
+    if re.match(pattern, email):
+        return True
+    return False
+
+
 def create_user(db: Session, request: UserBase):
     validate_email = db.query(User).filter(User.email == request.email).first()
+    if not isvalidEmail(request.email):
+        print("Invalid email")
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST, detail="Invalid email"
+        )
     if validate_email:
         print("Email already registered")
         raise HTTPException(
