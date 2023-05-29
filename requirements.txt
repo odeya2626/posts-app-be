@@ -8,3 +8,5 @@ aiofiles
 mypy
 pytest
 python-jose
+psycopg2
+sqlalchemy
