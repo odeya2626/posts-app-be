@@ -20,8 +20,7 @@ def root():
 origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "http://192.168.68.105:3000",
-    "https://stirring-bubblegum-6acae0.netlify.app",
+    "https://posts-app-fe.vercel.app",
 ]
 
 app.add_middleware(
