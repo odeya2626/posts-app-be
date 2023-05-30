@@ -17,7 +17,7 @@ def login(
     db: Annotated[Session, Depends(get_db)],
 ):
     print("login")
-    print("request", request.username)
+    print("request", request)
     user = db.query(User).filter(User.username == request.username).first()
     if not user:
         print("User not found")

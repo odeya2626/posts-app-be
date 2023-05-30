@@ -3,15 +3,20 @@ import shutil
 from datetime import datetime
 from typing import Optional
 
+import cloudinary
 from auth.oauth import get_current_user
+from cloudinary.uploader import upload
+from cloudinary.utils import cloudinary_url
 from db.database import get_db
 from db.db_post import create, delete, get_all
 from db.models import Post, User
+from dotenv import load_dotenv
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, status
 from pydantic import ValidationError
 from routers.schemas import PostBase, PostDisplay, UserAuth
 from sqlalchemy.orm import Session
 
+load_dotenv()
 router = APIRouter(prefix="/post", tags=["post"])
 
 
@@ -21,7 +26,7 @@ def create_post(
     db: Session = Depends(get_db),
     current_user: UserAuth = Depends(get_current_user),
 ):
-    print("hi", current_user.id)
+    print("current user id", current_user.id)
     try:
         PostBase(**request.dict())
         creator_username = db.query(User).filter(User.id == request.creator_id).first()
@@ -63,11 +68,28 @@ def upload_image(
     filename: str = f"{timestamp}_{image_name}"
     print(filename)
 
-    path = f"static/images/{filename}"
-    # os.makedirs(path, exist_ok=True)
-    with open(path, "wb") as buffer:
-        shutil.copyfileobj(image.file, buffer)
-    return {"filename": path}
+    # path = f"static/images/{filename}"
+    # # os.makedirs(path, exist_ok=True)
+    # with open(path, "wb") as buffer:
+    #     shutil.copyfileobj(image.file, buffer)
+    # return {"filename": path}
+    cloudinary.config(
+        cloud_name=os.getenv("CLOUD_NAME"),
+        api_key=os.getenv("API_KEY"),
+        api_secret=os.getenv("API_SECRET"),
+        secure=True,
+    )
+    upload_result = upload(image.file, folder="posts-app", public_id=filename)
+
+    url, options = cloudinary_url(
+        upload_result["public_id"],
+        format=upload_result["format"],
+        width=upload_result["width"],
+        height=upload_result["height"],
+        crop="fill",
+    )
+
+    return {"filename": url}
 
 
 @router.delete("/delete/{id}")
