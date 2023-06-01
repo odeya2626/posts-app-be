@@ -8,7 +8,7 @@ from auth.oauth import get_current_user
 from cloudinary.uploader import upload
 from cloudinary.utils import cloudinary_url
 from db.database import get_db
-from db.db_post import create, delete, get_all
+from db.db_post import create, delete, get_all, get_posts
 from db.models import Post, User
 from dotenv import load_dotenv
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, status
@@ -52,6 +52,16 @@ def create_post(
         )
 
 
+@router.get("/", response_model=list[PostDisplay])
+def get_paginated_posts(
+    db: Session = Depends(get_db),
+    limit: int = 3,
+    page: int = 1,
+):
+    print("limit", limit, "page", page)
+    return get_posts(db, limit, page)
+
+
 @router.get("/all", response_model=list[PostDisplay])
 def get_all_posts(db: Session = Depends(get_db)):
     return get_all(db)
@@ -78,6 +88,7 @@ def upload_image(
         api_key=os.getenv("API_KEY"),
         api_secret=os.getenv("API_SECRET"),
         secure=True,
+        fetch_format="auto",
     )
     upload_result = upload(image.file, folder="posts-app", public_id=filename)
 
