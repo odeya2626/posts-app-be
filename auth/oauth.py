@@ -4,18 +4,18 @@ from typing import Annotated, Optional
 
 from db.database import get_db
 from db.db_user import get_user_by_username
+from dotenv import load_dotenv
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import JWTError, jwt
 from sqlalchemy.orm import Session
 
+load_dotenv()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
-SECRET_KEY = "28hffuo84562iu[0IKAednwhi32703cutyhqmekihiufsdhf87u=tllcc51g107"
+SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
-secret = os.getenv("SECRET_KEY")
-print("secret", secret)
 
 
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
