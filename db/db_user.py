@@ -33,12 +33,10 @@ def isvalidEmail(email):
 def create_user(db: Session, request: UserBase):
     validate_email = db.query(User).filter(User.email == request.email).first()
     if not isvalidEmail(request.email):
-        print("Invalid email")
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST, detail="Invalid email"
         )
     if validate_email:
-        print("Email already registered")
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST, detail="Email already registered"
         )
@@ -50,8 +48,6 @@ def create_user(db: Session, request: UserBase):
     )
     db.add(new_user)
     db.commit()
-    db.refresh(new_user)
-    print(new_user)
     return new_user
 
 

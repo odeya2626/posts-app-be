@@ -16,22 +16,17 @@ def login(
     request: Annotated[OAuth2PasswordRequestForm, Depends()],
     db: Annotated[Session, Depends(get_db)],
 ):
-    print("login")
-    print("request", request)
     user = db.query(User).filter(User.username == request.username).first()
     if not user:
-        print("User not found")
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND, detail="Invalid credentials"
         )
 
     if not verify(request.password, user.password):
-        print("Invalid password")
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND, detail="Invalid credentials"
         )
     access_token = create_access_token(data={"username": user.username})
-    print("User logged in")
 
     return {
         "access_token": access_token,

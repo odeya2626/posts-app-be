@@ -71,18 +71,10 @@ def get_all_posts(db: Session = Depends(get_db)):
 def upload_image(
     image: UploadFile = File(...), current_user: UserAuth = Depends(get_current_user)
 ):
-    print("image", image)
     image_name: Optional[str] = image.filename
     timestamp: str = datetime.now().strftime("%Y%m%d%H%M%S")
-    # filename: str = os.path.join(timestamp, image_name or "")
     filename: str = f"{timestamp}_{image_name}"
-    print(filename)
 
-    # path = f"static/images/{filename}"
-    # # os.makedirs(path, exist_ok=True)
-    # with open(path, "wb") as buffer:
-    #     shutil.copyfileobj(image.file, buffer)
-    # return {"filename": path}
     cloudinary.config(
         cloud_name=os.getenv("CLOUD_NAME"),
         api_key=os.getenv("API_KEY"),

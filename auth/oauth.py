@@ -1,3 +1,4 @@
+import os
 from datetime import datetime, timedelta
 from typing import Annotated, Optional
 
@@ -13,6 +14,8 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 SECRET_KEY = "28hffuo84562iu[0IKAednwhi32703cutyhqmekihiufsdhf87u=tllcc51g107"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
+secret = os.getenv("SECRET_KEY")
+print("secret", secret)
 
 
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
@@ -29,7 +32,6 @@ def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
 def get_current_user(
     token: Annotated[str, Depends(oauth2_scheme)], db: Session = Depends(get_db)
 ):
-    print("get_current_user")
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Could not validate credentials",
@@ -45,5 +47,4 @@ def get_current_user(
     user = get_user_by_username(db, username=username)
     if user is None:
         raise credentials_exception
-    print("user", user)
     return user

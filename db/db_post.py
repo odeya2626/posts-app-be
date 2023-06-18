@@ -59,11 +59,11 @@ def delete(id: int, db: Session, current_user_id: int):
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND, detail="Post not found"
         )
-    if post.creator_id != current_user_id:
-        raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
-            detail="You can only delete your own posts",
-        )
+    # if post.creator_id != current_user_id:
+    #     raise HTTPException(
+    #         status_code=status.HTTP_403_FORBIDDEN,
+    #         detail="You can only delete your own posts",
+    #     )
     db.delete(post)
     db.commit()
     return {"message": "Post deleted successfully"}
