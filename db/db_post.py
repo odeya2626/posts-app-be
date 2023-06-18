@@ -2,23 +2,32 @@ from datetime import datetime
 
 from db.models import Post
 from fastapi import HTTPException, status
+from logger import setup_logger
 from routers.schemas import PostBase, PostDisplay
 from sqlalchemy.orm import Session
 
+logger, dir_path = setup_logger("db_post.py", "logging", "a")
+
 
 def create(db: Session, request: PostBase):
-    new_post = Post(
-        img_url=request.img_url,
-        img_url_type=request.img_url_type,
-        caption=request.caption,
-        creator_id=request.creator_id,
-        timestamp=datetime.now(),
-    )
-    db.add(new_post)
-    db.commit()
-    db.refresh(new_post)
-    print(new_post == PostDisplay, "new_post", new_post)
-    return new_post
+    try:
+        new_post = Post(
+            img_url=request.img_url,
+            img_url_type=request.img_url_type,
+            caption=request.caption,
+            creator_id=request.creator_id,
+            timestamp=datetime.now(),
+        )
+        db.add(new_post)
+        db.commit()
+        db.refresh(new_post)
+
+        return new_post
+    except Exception as e:
+        logger.error(e)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Server error"
+        )
 
 
 def get_all(db: Session):
@@ -34,13 +43,13 @@ def get_posts(db: Session, limit: int, page: int):
             .limit(limit)
             .all()
         )
-        print("result", result)
+        logger.info(result)
         return result
 
     except Exception as e:
-        print("e", e)
+        logger.error(e)
         raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST, detail="Invalid data"
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Server error"
         )
 
 
