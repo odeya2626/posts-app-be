@@ -1,8 +1,4 @@
-2023-06-04 13:13:06,812 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC5C60>, <db.models.Post object at 0x000002544CBC5E40>, <db.models.Post object at 0x000002544CBC58D0>]
-2023-06-04 13:13:07,986 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC6440>, <db.models.Post object at 0x000002544CBC4F70>, <db.models.Post object at 0x000002544CBC6410>]
-2023-06-04 13:13:16,209 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB4D60>, <db.models.Post object at 0x000002544CBB7790>, <db.models.Post object at 0x000002544CBB55A0>]
-2023-06-04 13:13:25,234 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 13:13:52,706 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
+2023-06-23 12:04:59,348 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
 	This probably means the server terminated abnormally
 	before or while processing the request.
 server closed the connection unexpectedly
@@ -14,12 +10,16 @@ FROM posts ORDER BY posts.timestamp DESC
  LIMIT %(param_1)s OFFSET %(param_2)s]
 [parameters: {'param_1': 3, 'param_2': 0}]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:13:53,725 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC5270>, <db.models.Post object at 0x000002544CBC4CA0>, <db.models.Post object at 0x000002544CBC55D0>]
-2023-06-04 13:14:00,338 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC4430>, <db.models.Post object at 0x000002544CBC5390>, <db.models.Post object at 0x000002544CBC5E70>]
-2023-06-04 13:14:03,650 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 13:14:12,914 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC7D90>, <db.models.Post object at 0x000002544CBC7DF0>, <db.models.Post object at 0x000002544CBC7E20>]
-2023-06-04 13:14:13,528 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC6020>, <db.models.Post object at 0x000002544CBC5F00>, <db.models.Post object at 0x000002544CBC6380>]
-2023-06-04 13:25:20,751 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
+2023-06-23 12:05:00,085 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000018A8CDA3B80>, <db.models.Post object at 0x0000018A8CDA3BE0>, <db.models.Post object at 0x0000018A8CDA3C10>]
+2023-06-23 12:05:00,476 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000018A8CDA3DF0>, <db.models.Post object at 0x0000018A8CDA35E0>, <db.models.Post object at 0x0000018A8CDA33A0>]
+2023-06-23 12:05:01,067 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000018A8CDA3190>, <db.models.Post object at 0x0000018A8CDA3130>, <db.models.Post object at 0x0000018A8CDA2770>]
+2023-06-23 12:11:48,624 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000018A8D018550>, <db.models.Post object at 0x0000018A8D018A30>, <db.models.Post object at 0x0000018A8D018370>]
+2023-06-23 12:11:49,187 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000018A8CDA3F70>, <db.models.Post object at 0x0000018A8CDA3E50>, <db.models.Post object at 0x0000018A8CDA3730>]
+2023-06-23 12:12:08,874 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000018A8CDA2590>, <db.models.Post object at 0x0000018A8CDA1FF0>, <db.models.Post object at 0x0000018A8CDA26B0>]
+2023-06-23 12:12:09,460 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000018A8CDA2F50>, <db.models.Post object at 0x0000018A8CDA3C10>, <db.models.Post object at 0x0000018A8CDA2C50>]
+2023-06-23 12:12:15,362 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000018A8D018A90>, <db.models.Post object at 0x0000018A8D019E40>, <db.models.Post object at 0x0000018A8D019F30>]
+2023-06-23 12:12:15,938 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000018A8CDA31F0>, <db.models.Post object at 0x0000018A8CDA3D30>, <db.models.Post object at 0x0000018A8CDA3100>]
+2023-06-23 12:42:29,009 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
 	This probably means the server terminated abnormally
 	before or while processing the request.
 server closed the connection unexpectedly
@@ -31,12 +31,11 @@ FROM posts ORDER BY posts.timestamp DESC
  LIMIT %(param_1)s OFFSET %(param_2)s]
 [parameters: {'param_1': 3, 'param_2': 0}]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:25:21,576 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC5C30>, <db.models.Post object at 0x000002544CBC7F10>, <db.models.Post object at 0x000002544CBC7970>]
-2023-06-04 13:25:42,472 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC4DF0>, <db.models.Post object at 0x000002544CBC7700>, <db.models.Post object at 0x000002544CBC7730>]
-2023-06-04 13:25:43,121 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC58A0>, <db.models.Post object at 0x000002544CBC53F0>, <db.models.Post object at 0x000002544CBC5B10>]
-2023-06-04 13:25:49,348 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC4160>, <db.models.Post object at 0x000002544CBC5C00>, <db.models.Post object at 0x000002544CBC6B00>]
-2023-06-04 13:25:51,256 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 13:26:29,233 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
+2023-06-23 12:42:29,682 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002AC0E142C80>, <db.models.Post object at 0x000002AC0E142470>, <db.models.Post object at 0x000002AC0E1424A0>]
+2023-06-23 12:42:37,186 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002AC0E184490>, <db.models.Post object at 0x000002AC0E1843D0>, <db.models.Post object at 0x000002AC0E184430>]
+2023-06-23 12:42:38,270 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002AC0E186560>, <db.models.Post object at 0x000002AC0E186770>, <db.models.Post object at 0x000002AC0E186B60>]
+2023-06-23 12:42:50,037 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002AC0E186FE0>, <db.models.Post object at 0x000002AC0E1870D0>]
+2023-06-23 12:43:35,520 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
 	This probably means the server terminated abnormally
 	before or while processing the request.
 server closed the connection unexpectedly
@@ -48,30 +47,23 @@ FROM posts ORDER BY posts.timestamp DESC
  LIMIT %(param_1)s OFFSET %(param_2)s]
 [parameters: {'param_1': 3, 'param_2': 0}]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:26:29,985 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBD48E0>, <db.models.Post object at 0x000002544CBD4940>, <db.models.Post object at 0x000002544CBD4970>]
-2023-06-04 13:26:33,532 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB42B0>, <db.models.Post object at 0x000002544CBB4970>, <db.models.Post object at 0x000002544CBB6470>]
-2023-06-04 13:26:34,121 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC4A60>, <db.models.Post object at 0x000002544CBC4850>, <db.models.Post object at 0x000002544CBC71C0>]
-2023-06-04 13:26:37,321 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC6F50>, <db.models.Post object at 0x000002544CBC6710>, <db.models.Post object at 0x000002544CBC7D60>]
-2023-06-04 13:26:37,939 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB6470>, <db.models.Post object at 0x000002544CBB5660>, <db.models.Post object at 0x000002544CBB6830>]
-2023-06-04 13:26:42,348 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC5FF0>, <db.models.Post object at 0x000002544CBC5BA0>, <db.models.Post object at 0x000002544CBC5480>]
-2023-06-04 13:26:42,960 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB64A0>, <db.models.Post object at 0x000002544CBB69B0>, <db.models.Post object at 0x000002544CBB6320>]
-2023-06-04 13:26:44,755 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC7100>, <db.models.Post object at 0x000002544CBC4AF0>, <db.models.Post object at 0x000002544CBC4DF0>]
-2023-06-04 13:26:45,674 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB4970>, <db.models.Post object at 0x000002544CBB6620>, <db.models.Post object at 0x000002544CBB6CE0>]
-2023-06-04 13:26:49,073 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBD4DC0>, <db.models.Post object at 0x000002544CBD50F0>, <db.models.Post object at 0x000002544CBD4790>]
-2023-06-04 13:26:49,720 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB61A0>, <db.models.Post object at 0x000002544CBB6320>, <db.models.Post object at 0x000002544CBB4640>]
-2023-06-04 13:26:51,161 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBD5E40>, <db.models.Post object at 0x000002544CBD5E70>, <db.models.Post object at 0x000002544CBD5F60>]
-2023-06-04 13:26:51,786 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC6CB0>, <db.models.Post object at 0x000002544CBC50C0>, <db.models.Post object at 0x000002544CBC66B0>]
-2023-06-04 13:26:53,102 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC47C0>, <db.models.Post object at 0x000002544CBC7B80>, <db.models.Post object at 0x000002544CBC74F0>]
-2023-06-04 13:26:53,738 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC7190>, <db.models.Post object at 0x000002544CBC4E80>, <db.models.Post object at 0x000002544CBC7AF0>]
-2023-06-04 13:26:55,840 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB7730>, <db.models.Post object at 0x000002544CBB71F0>, <db.models.Post object at 0x000002544CBB5AE0>]
-2023-06-04 13:26:56,459 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC7190>, <db.models.Post object at 0x000002544CBC7430>, <db.models.Post object at 0x000002544CBC7E80>]
-2023-06-04 13:26:59,506 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB4550>, <db.models.Post object at 0x000002544CBB5390>, <db.models.Post object at 0x000002544CBB4CD0>]
-2023-06-04 13:27:00,134 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC6B00>, <db.models.Post object at 0x000002544CBC6DA0>, <db.models.Post object at 0x000002544CBC62C0>]
-2023-06-04 13:27:01,609 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC6710>, <db.models.Post object at 0x000002544CBC63B0>, <db.models.Post object at 0x000002544CBC4FA0>]
-2023-06-04 13:27:02,255 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB7910>, <db.models.Post object at 0x000002544CBB4550>, <db.models.Post object at 0x000002544CBB74F0>]
-2023-06-04 13:27:04,670 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CB8A1A0>, <db.models.Post object at 0x000002544CB88A00>, <db.models.Post object at 0x000002544CB891B0>]
-2023-06-04 13:27:12,796 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 13:27:50,902 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
+2023-06-23 12:43:36,196 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002AC0E186A10>, <db.models.Post object at 0x000002AC0E186E00>, <db.models.Post object at 0x000002AC0E184CA0>]
+2023-06-23 12:43:44,029 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002AC0E1A24D0>, <db.models.Post object at 0x000002AC0E1A2BF0>, <db.models.Post object at 0x000002AC0E1A2500>]
+2023-06-23 12:43:44,618 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002AC0E187730>, <db.models.Post object at 0x000002AC0E186950>, <db.models.Post object at 0x000002AC0E1867A0>]
+2023-06-23 12:44:07,288 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026339C96830>, <db.models.Post object at 0x0000026339C97A90>, <db.models.Post object at 0x0000026339C97A00>]
+2023-06-23 12:44:08,431 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026339C95B10>, <db.models.Post object at 0x0000026339C955A0>, <db.models.Post object at 0x0000026339C962F0>]
+2023-06-23 12:44:10,253 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026339CFA4D0>, <db.models.Post object at 0x0000026339CF97E0>]
+2023-06-23 12:45:42,858 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023F5EAA6800>, <db.models.Post object at 0x0000023F5EAA7A90>, <db.models.Post object at 0x0000023F5EAA7A60>]
+2023-06-23 12:45:44,252 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023F5EAA5A20>, <db.models.Post object at 0x0000023F5EAA54B0>, <db.models.Post object at 0x0000023F5EAA62C0>]
+2023-06-23 12:45:46,496 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023F5EB0A530>, <db.models.Post object at 0x0000023F5EB0AC50>]
+2023-06-23 12:45:51,191 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023F5EB310F0>, <db.models.Post object at 0x0000023F5EB31150>, <db.models.Post object at 0x0000023F5EB31180>]
+2023-06-23 12:45:51,776 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023F5EB0A0B0>, <db.models.Post object at 0x0000023F5EB09480>, <db.models.Post object at 0x0000023F5EB0A440>]
+2023-06-23 12:45:55,717 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023F5EB09B40>, <db.models.Post object at 0x0000023F5EB0A230>, <db.models.Post object at 0x0000023F5EB0A1D0>]
+2023-06-23 12:45:56,306 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023F5EAA58D0>, <db.models.Post object at 0x0000023F5EB31030>, <db.models.Post object at 0x0000023F5EB30BE0>]
+2023-06-23 12:45:58,548 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023F5EB32290>, <db.models.Post object at 0x0000023F5EB31D20>]
+2023-06-23 12:46:24,229 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023F5EB32D40>, <db.models.Post object at 0x0000023F5EB33C70>, <db.models.Post object at 0x0000023F5EB320B0>]
+2023-06-23 12:46:24,816 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023F5EB33070>, <db.models.Post object at 0x0000023F5EB33FD0>, <db.models.Post object at 0x0000023F5EB30B20>]
+2023-06-23 13:01:43,323 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
 	This probably means the server terminated abnormally
 	before or while processing the request.
 server closed the connection unexpectedly
@@ -83,10 +75,12 @@ FROM posts ORDER BY posts.timestamp DESC
  LIMIT %(param_1)s OFFSET %(param_2)s]
 [parameters: {'param_1': 3, 'param_2': 0}]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:27:51,702 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CB4A5C0>, <db.models.Post object at 0x000002544CB49270>, <db.models.Post object at 0x000002544CB48EB0>]
-2023-06-04 13:27:55,415 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB71C0>, <db.models.Post object at 0x000002544CBB7010>, <db.models.Post object at 0x000002544CBB4D30>]
-2023-06-04 13:28:00,958 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 13:28:45,873 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
+2023-06-23 13:01:44,063 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000235E51593C0>, <db.models.Post object at 0x00000235E5159C00>, <db.models.Post object at 0x00000235E5159BD0>]
+2023-06-23 13:01:44,529 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000235E515B8B0>, <db.models.Post object at 0x00000235E515B820>, <db.models.Post object at 0x00000235E515B730>]
+2023-06-23 13:01:45,134 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000235E5158EB0>, <db.models.Post object at 0x00000235E5158700>, <db.models.Post object at 0x00000235E5158EE0>]
+2023-06-23 13:01:48,849 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000235E515BA30>, <db.models.Post object at 0x00000235E515BA60>, <db.models.Post object at 0x00000235E515BA90>]
+2023-06-23 13:01:49,455 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000235E515A290>, <db.models.Post object at 0x00000235E5158AC0>, <db.models.Post object at 0x00000235E5158280>]
+2023-06-23 13:04:49,247 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
 	This probably means the server terminated abnormally
 	before or while processing the request.
 server closed the connection unexpectedly
@@ -98,9 +92,14 @@ FROM posts ORDER BY posts.timestamp DESC
  LIMIT %(param_1)s OFFSET %(param_2)s]
 [parameters: {'param_1': 3, 'param_2': 0}]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:28:46,666 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC6080>, <db.models.Post object at 0x000002544CBC7AF0>, <db.models.Post object at 0x000002544CBC6020>]
-2023-06-04 13:28:50,415 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CB89C60>, <db.models.Post object at 0x000002544CB893F0>, <db.models.Post object at 0x000002544CB88E80>]
-2023-06-04 13:29:26,849 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
+2023-06-23 13:04:50,151 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000235E515BE50>, <db.models.Post object at 0x00000235E515BF10>, <db.models.Post object at 0x00000235E515B970>]
+2023-06-23 13:04:58,859 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000235E51936D0>, <db.models.Post object at 0x00000235E5193670>, <db.models.Post object at 0x00000235E5193640>]
+2023-06-23 13:04:59,477 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000235E5193D60>, <db.models.Post object at 0x00000235E5193910>, <db.models.Post object at 0x00000235E5193820>]
+2023-06-23 13:05:16,327 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000235E52040D0>, <db.models.Post object at 0x00000235E5204070>, <db.models.Post object at 0x00000235E52040A0>]
+2023-06-23 13:05:16,933 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000235E5192D40>, <db.models.Post object at 0x00000235E51917B0>, <db.models.Post object at 0x00000235E5191B70>]
+2023-06-23 13:05:27,811 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000235E5204460>, <db.models.Post object at 0x00000235E52041F0>, <db.models.Post object at 0x00000235E52042B0>]
+2023-06-23 13:05:28,420 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000235E5191390>, <db.models.Post object at 0x00000235E5192680>, <db.models.Post object at 0x00000235E51933D0>]
+2023-06-23 13:22:17,979 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
 	This probably means the server terminated abnormally
 	before or while processing the request.
 server closed the connection unexpectedly
@@ -112,9 +111,17 @@ FROM posts ORDER BY posts.timestamp DESC
  LIMIT %(param_1)s OFFSET %(param_2)s]
 [parameters: {'param_1': 3, 'param_2': 0}]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:29:27,668 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CB88BB0>, <db.models.Post object at 0x000002544CB88280>, <db.models.Post object at 0x000002544CB883A0>]
-2023-06-04 13:30:52,741 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC55A0>, <db.models.Post object at 0x000002544CBC6EC0>, <db.models.Post object at 0x000002544CBC5060>]
-2023-06-04 13:30:53,830 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
+2023-06-23 13:22:18,719 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001430399A170>, <db.models.Post object at 0x000001430399A1D0>, <db.models.Post object at 0x000001430399A1A0>]
+2023-06-23 13:23:00,908 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001902BC006D0>, <db.models.Post object at 0x000001902BC00E80>, <db.models.Post object at 0x000001902BC00E50>]
+2023-06-23 13:23:01,595 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001902BC02DD0>, <db.models.Post object at 0x000001902BC01510>, <db.models.Post object at 0x000001902BC03190>]
+2023-06-23 13:23:02,198 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001902BC00370>, <db.models.Post object at 0x000001902BC00340>, <db.models.Post object at 0x000001902BC003A0>]
+2023-06-23 13:23:08,768 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001902BC3C370>, <db.models.Post object at 0x000001902BC3C3D0>, <db.models.Post object at 0x000001902BC3C400>]
+2023-06-23 13:23:09,331 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001902BC03CD0>, <db.models.Post object at 0x000001902BC03BE0>, <db.models.Post object at 0x000001902BC037F0>]
+2023-06-23 13:24:28,520 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000019270359600>, <db.models.Post object at 0x0000019270359660>, <db.models.Post object at 0x0000019270359690>]
+2023-06-23 13:24:29,721 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000192703580D0>, <db.models.Post object at 0x00000192703580A0>, <db.models.Post object at 0x0000019270358070>]
+2023-06-23 13:24:39,415 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000019270383190>, <db.models.Post object at 0x0000019270383130>, <db.models.Post object at 0x0000019270383910>]
+2023-06-23 13:24:40,001 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000019270381C30>, <db.models.Post object at 0x0000019270381B40>, <db.models.Post object at 0x0000019270380640>]
+2023-06-23 13:44:20,270 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
 	This probably means the server terminated abnormally
 	before or while processing the request.
 server closed the connection unexpectedly
@@ -126,15 +133,34 @@ FROM posts ORDER BY posts.timestamp DESC
  LIMIT %(param_1)s OFFSET %(param_2)s]
 [parameters: {'param_1': 3, 'param_2': 0}]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:31:34,521 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBD4B80>, <db.models.Post object at 0x000002544CBD4D60>, <db.models.Post object at 0x000002544CBD6FE0>]
-2023-06-04 13:31:49,843 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBD58A0>, <db.models.Post object at 0x000002544CBD4040>, <db.models.Post object at 0x000002544CBD4220>]
-2023-06-04 13:31:50,463 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CB89DE0>, <db.models.Post object at 0x000002544CB88BE0>, <db.models.Post object at 0x000002544CB88EE0>]
-2023-06-04 13:31:52,314 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CB8AAD0>, <db.models.Post object at 0x000002544CB886A0>, <db.models.Post object at 0x000002544CB880D0>]
-2023-06-04 13:31:54,648 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 13:32:06,874 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CB8A890>, <db.models.Post object at 0x000002544CB8B1C0>, <db.models.Post object at 0x000002544CB89C60>]
-2023-06-04 13:32:07,470 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CB48EB0>, <db.models.Post object at 0x000002544CB4A800>, <db.models.Post object at 0x000002544CBC7070>]
-2023-06-04 13:32:10,758 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC4AC0>, <db.models.Post object at 0x000002544CBC5B10>, <db.models.Post object at 0x000002544CBC5720>]
-2023-06-04 13:32:59,481 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
+2023-06-23 13:44:21,001 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022F56CA4250>, <db.models.Post object at 0x0000022F56CA4A60>, <db.models.Post object at 0x0000022F56CA4A30>]
+2023-06-23 13:48:45,053 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000019CAEA8ED70>, <db.models.Post object at 0x0000019CAEA8F9D0>, <db.models.Post object at 0x0000019CAEA8F9A0>]
+2023-06-23 13:48:45,797 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000019CAEAFD9C0>, <db.models.Post object at 0x0000019CAEAFE080>, <db.models.Post object at 0x0000019CAEAFE4A0>]
+2023-06-23 13:48:46,367 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000019CAEAFD7E0>, <db.models.Post object at 0x0000019CAEAFCDF0>, <db.models.Post object at 0x0000019CAEAFD810>]
+2023-06-23 13:48:48,313 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000019CAEAFF1F0>, <db.models.Post object at 0x0000019CAEAFF220>, <db.models.Post object at 0x0000019CAEAFF250>]
+2023-06-23 13:48:48,893 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000019CAEAFC250>, <db.models.Post object at 0x0000019CAEAFC1C0>, <db.models.Post object at 0x0000019CAEAFE860>]
+2023-06-23 13:48:51,245 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000019CAEAFF7F0>, <db.models.Post object at 0x0000019CAEAFC340>, <db.models.Post object at 0x0000019CAEAFC520>]
+2023-06-23 14:05:41,007 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A2D4102C50>, <db.models.Post object at 0x000001A2D4103A30>, <db.models.Post object at 0x000001A2D4103A00>]
+2023-06-23 14:05:41,887 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A2D407B760>, <db.models.Post object at 0x000001A2D407B1C0>, <db.models.Post object at 0x000001A2D4162A40>]
+2023-06-23 14:05:42,465 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A2D41628C0>, <db.models.Post object at 0x000001A2D4162800>, <db.models.Post object at 0x000001A2D41627D0>]
+2023-06-23 14:05:44,626 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A2D41630D0>, <db.models.Post object at 0x000001A2D4163130>, <db.models.Post object at 0x000001A2D4163490>]
+2023-06-23 14:05:45,206 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A2D4161F00>, <db.models.Post object at 0x000001A2D4162560>, <db.models.Post object at 0x000001A2D4163520>]
+2023-06-23 14:10:37,104 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022CFA0E2C50>, <db.models.Post object at 0x0000022CFA0E3A30>, <db.models.Post object at 0x0000022CFA0E3A00>]
+2023-06-23 14:10:37,940 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022CFA053760>, <db.models.Post object at 0x0000022CFA0531C0>, <db.models.Post object at 0x0000022CFA142710>]
+2023-06-23 14:10:38,550 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022CFA142500>, <db.models.Post object at 0x0000022CFA141B10>, <db.models.Post object at 0x0000022CFA142530>]
+2023-06-23 14:10:40,119 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022CFA1430D0>, <db.models.Post object at 0x0000022CFA143130>, <db.models.Post object at 0x0000022CFA143490>]
+2023-06-23 14:10:40,720 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022CFA141C30>, <db.models.Post object at 0x0000022CFA142290>, <db.models.Post object at 0x0000022CFA143520>]
+2023-06-23 14:22:04,120 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001543F8C2CB0>, <db.models.Post object at 0x000001543F8C3A30>, <db.models.Post object at 0x000001543F8C39A0>]
+2023-06-23 14:22:04,779 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001543F922410>, <db.models.Post object at 0x000001543F922470>, <db.models.Post object at 0x000001543F9224A0>]
+2023-06-23 14:22:05,920 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001543F920610>, <db.models.Post object at 0x000001543F920130>, <db.models.Post object at 0x000001543F920D30>]
+2023-06-23 14:22:08,558 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001543F9230D0>, <db.models.Post object at 0x000001543F923130>, <db.models.Post object at 0x000001543F923160>]
+2023-06-23 14:22:09,146 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001543F921A50>, <db.models.Post object at 0x000001543F922F20>, <db.models.Post object at 0x000001543F922110>]
+2023-06-23 14:43:55,587 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001F6BA962CE0>, <db.models.Post object at 0x000001F6BA9639D0>, <db.models.Post object at 0x000001F6BA9639A0>]
+2023-06-23 14:43:56,624 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001F6BA8D7310>, <db.models.Post object at 0x000001F6BA8D7220>, <db.models.Post object at 0x000001F6BA8D77C0>]
+2023-06-23 14:43:57,240 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001F6BA9C6A40>, <db.models.Post object at 0x000001F6BA9C6050>, <db.models.Post object at 0x000001F6BA9C6A70>]
+2023-06-23 14:44:12,227 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001F6BA9C7700>, <db.models.Post object at 0x000001F6BA8D6EF0>, <db.models.Post object at 0x000001F6BA8D6FE0>]
+2023-06-23 14:44:12,820 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001F6BA9C5AB0>, <db.models.Post object at 0x000001F6BA9C7010>, <db.models.Post object at 0x000001F6BA9C61A0>]
+2023-06-23 14:49:59,490 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
 	This probably means the server terminated abnormally
 	before or while processing the request.
 server closed the connection unexpectedly
@@ -146,10 +172,12 @@ FROM posts ORDER BY posts.timestamp DESC
  LIMIT %(param_1)s OFFSET %(param_2)s]
 [parameters: {'param_1': 3, 'param_2': 0}]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:33:00,321 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE2950>, <db.models.Post object at 0x000002544CBE29B0>, <db.models.Post object at 0x000002544CBE29E0>]
-2023-06-04 13:33:03,737 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CA61D20>, <db.models.Post object at 0x000002544CA631F0>, <db.models.Post object at 0x000002544CA63DC0>]
-2023-06-04 13:33:05,836 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 13:34:51,856 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
+2023-06-23 14:50:00,459 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A118F702B0>, <db.models.Post object at 0x000001A118F70AC0>, <db.models.Post object at 0x000001A118F70A90>]
+2023-06-23 14:50:08,172 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A118F73040>, <db.models.Post object at 0x000001A118F730A0>, <db.models.Post object at 0x000001A118F730D0>]
+2023-06-23 14:50:10,570 MainProcess - db_post.py:46 - INFO []
+2023-06-23 14:50:16,799 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A118FA3CA0>, <db.models.Post object at 0x000001A118FA3D00>, <db.models.Post object at 0x000001A118FA3D30>]
+2023-06-23 14:50:17,931 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A118FA2770>, <db.models.Post object at 0x000001A118FA32B0>, <db.models.Post object at 0x000001A118FA2950>]
+2023-06-23 14:53:46,088 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
 	This probably means the server terminated abnormally
 	before or while processing the request.
 server closed the connection unexpectedly
@@ -161,16 +189,27 @@ FROM posts ORDER BY posts.timestamp DESC
  LIMIT %(param_1)s OFFSET %(param_2)s]
 [parameters: {'param_1': 3, 'param_2': 0}]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:34:52,837 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE1BD0>, <db.models.Post object at 0x000002544CBE1840>, <db.models.Post object at 0x000002544CBE2050>]
-2023-06-04 13:35:10,774 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CB89540>, <db.models.Post object at 0x000002544CB88910>, <db.models.Post object at 0x000002544CB88A00>]
-2023-06-04 13:35:11,434 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB7400>, <db.models.Post object at 0x000002544CBB5780>, <db.models.Post object at 0x000002544CBB6740>]
-2023-06-04 13:35:13,274 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB4970>, <db.models.Post object at 0x000002544CBB79A0>, <db.models.Post object at 0x000002544CBB4AF0>]
-2023-06-04 13:35:15,883 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 13:35:22,357 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE3CA0>, <db.models.Post object at 0x000002544CBE3C40>, <db.models.Post object at 0x000002544CBE2C50>]
-2023-06-04 13:35:22,988 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CB8AE30>, <db.models.Post object at 0x000002544CB89810>, <db.models.Post object at 0x000002544CBE10F0>]
-2023-06-04 13:35:25,458 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE2F80>, <db.models.Post object at 0x000002544CBE0BE0>, <db.models.Post object at 0x000002544CBE33A0>]
-2023-06-04 13:35:28,004 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 13:36:27,116 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
+2023-06-23 14:53:46,995 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A118F71330>, <db.models.Post object at 0x000001A118F731C0>, <db.models.Post object at 0x000001A118F70070>]
+2023-06-23 14:53:47,294 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A118F72B60>, <db.models.Post object at 0x000001A118F70520>, <db.models.Post object at 0x000001A118F710C0>]
+2023-06-23 14:53:47,863 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A118FCFD00>, <db.models.Post object at 0x000001A118FCE680>, <db.models.Post object at 0x000001A118FCDA20>]
+2023-06-23 14:53:54,642 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A118FCD8A0>, <db.models.Post object at 0x000001A118FA22C0>, <db.models.Post object at 0x000001A118FA2B30>]
+2023-06-23 14:53:55,211 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A118FCD1B0>, <db.models.Post object at 0x000001A118FCDAE0>, <db.models.Post object at 0x000001A118FCEB30>]
+2023-06-23 14:57:39,800 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001CC7778AA70>, <db.models.Post object at 0x000001CC7778BDF0>, <db.models.Post object at 0x000001CC7778BE20>]
+2023-06-23 14:57:40,929 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001CC777E2530>, <db.models.Post object at 0x000001CC777E2590>, <db.models.Post object at 0x000001CC777E25C0>]
+2023-06-23 14:57:41,538 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001CC777E1ED0>, <db.models.Post object at 0x000001CC777E1BD0>, <db.models.Post object at 0x000001CC777E1F60>]
+2023-06-23 14:57:46,238 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001CC777E2E90>, <db.models.Post object at 0x000001CC777E2EF0>, <db.models.Post object at 0x000001CC777E2F20>]
+2023-06-23 14:57:46,836 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001CC777E2D70>, <db.models.Post object at 0x000001CC777E28C0>, <db.models.Post object at 0x000001CC777E27D0>]
+2023-06-23 15:05:45,458 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000016EF977CC10>, <db.models.Post object at 0x0000016EF977CC70>, <db.models.Post object at 0x0000016EF977CCA0>]
+2023-06-23 15:05:46,648 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000016EF97173A0>, <db.models.Post object at 0x0000016EF9717430>, <db.models.Post object at 0x0000016EF97170A0>]
+2023-06-23 15:09:21,141 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022CDB0F6CE0>, <db.models.Post object at 0x0000022CDB0F79D0>, <db.models.Post object at 0x0000022CDB0F79A0>]
+2023-06-23 15:09:22,239 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022CDB0F60B0>, <db.models.Post object at 0x0000022CDB0F4040>, <db.models.Post object at 0x0000022CDB0F53F0>]
+2023-06-23 15:09:27,191 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022CDB152740>, <db.models.Post object at 0x0000022CDB1527A0>, <db.models.Post object at 0x0000022CDB1527D0>]
+2023-06-23 15:09:27,785 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022CDB150C40>, <db.models.Post object at 0x0000022CDB152620>, <db.models.Post object at 0x0000022CDB150130>]
+2023-06-23 15:09:46,291 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022CDB1C6980>, <db.models.Post object at 0x0000022CDB1C6920>, <db.models.Post object at 0x0000022CDB1C68F0>]
+2023-06-23 15:09:46,883 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022CDB1C44C0>, <db.models.Post object at 0x0000022CDB1C52D0>, <db.models.Post object at 0x0000022CDB1C52A0>]
+2023-06-23 15:09:51,188 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022CDB1C6410>, <db.models.Post object at 0x0000022CDB1C43D0>, <db.models.Post object at 0x0000022CDB1C6380>]
+2023-06-23 15:09:51,784 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022CDB1C6D70>, <db.models.Post object at 0x0000022CDB1C6E60>, <db.models.Post object at 0x0000022CDB1C6F80>]
+2023-06-23 15:17:28,721 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
 	This probably means the server terminated abnormally
 	before or while processing the request.
 server closed the connection unexpectedly
@@ -182,10 +221,8 @@ FROM posts ORDER BY posts.timestamp DESC
  LIMIT %(param_1)s OFFSET %(param_2)s]
 [parameters: {'param_1': 3, 'param_2': 0}]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:36:28,407 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE23E0>, <db.models.Post object at 0x000002544CBE2290>, <db.models.Post object at 0x000002544CBE2710>]
-2023-06-04 13:36:33,125 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE1AE0>, <db.models.Post object at 0x000002544CBE2BF0>, <db.models.Post object at 0x000002544CBE1DB0>]
-2023-06-04 13:36:34,793 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 13:38:34,961 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
+2023-06-23 15:17:29,450 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022CDB0A54B0>, <db.models.Post object at 0x0000022CDB0A44C0>, <db.models.Post object at 0x0000022CDB0A56C0>]
+2023-06-23 15:18:13,957 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
 	This probably means the server terminated abnormally
 	before or while processing the request.
 server closed the connection unexpectedly
@@ -197,9 +234,26 @@ FROM posts ORDER BY posts.timestamp DESC
  LIMIT %(param_1)s OFFSET %(param_2)s]
 [parameters: {'param_1': 3, 'param_2': 0}]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:38:35,940 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE19C0>, <db.models.Post object at 0x000002544CBE11B0>, <db.models.Post object at 0x000002544CBE0370>]
-2023-06-04 13:42:14,177 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC6080>, <db.models.Post object at 0x000002544CBC4C40>, <db.models.Post object at 0x000002544CBC74F0>]
-2023-06-04 13:42:14,672 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
+2023-06-23 15:18:14,649 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000022CDB1C5A50>, <db.models.Post object at 0x0000022CDB1C6200>, <db.models.Post object at 0x0000022CDB1C6290>]
+2023-06-23 15:25:44,196 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001E385E5AA10>, <db.models.Post object at 0x000001E385E5BD90>, <db.models.Post object at 0x000001E385E5BDC0>]
+2023-06-23 15:25:45,024 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001E385DC3520>, <db.models.Post object at 0x000001E385DC2F80>, <db.models.Post object at 0x000001E385EB24D0>]
+2023-06-23 15:25:45,649 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001E385EB22C0>, <db.models.Post object at 0x000001E385EB18D0>, <db.models.Post object at 0x000001E385EB22F0>]
+2023-06-23 15:25:53,603 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001E385EB3790>, <db.models.Post object at 0x000001E385EB37F0>, <db.models.Post object at 0x000001E385EB3820>]
+2023-06-23 15:25:54,232 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001E385EB2560>, <db.models.Post object at 0x000001E385EB2D70>, <db.models.Post object at 0x000001E385EB2B30>]
+2023-06-23 15:37:25,347 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001E3861DD4E0>, <db.models.Post object at 0x000001E3861DD540>, <db.models.Post object at 0x000001E3861DD510>]
+2023-06-23 15:37:25,350 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001E3861DD930>, <db.models.Post object at 0x000001E3861DD990>, <db.models.Post object at 0x000001E3861DD960>]
+2023-06-23 15:37:25,716 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001E3861DE4D0>, <db.models.Post object at 0x000001E3861DE530>, <db.models.Post object at 0x000001E3861DE560>]
+2023-06-23 15:37:26,319 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001E3861DC760>, <db.models.Post object at 0x000001E3861DCCA0>, <db.models.Post object at 0x000001E3861DCEB0>]
+2023-06-23 15:37:40,322 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001E3861DE2C0>, <db.models.Post object at 0x000001E3861DCB80>, <db.models.Post object at 0x000001E3861DD840>]
+2023-06-23 15:37:40,905 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001E3861DDB70>, <db.models.Post object at 0x000001E3861DC5B0>, <db.models.Post object at 0x000001E3861DE4D0>]
+2023-06-23 15:39:26,709 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001DF2F346CE0>, <db.models.Post object at 0x000001DF2F3479D0>, <db.models.Post object at 0x000001DF2F3479A0>]
+2023-06-23 15:39:27,549 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001DF2F2B37F0>, <db.models.Post object at 0x000001DF2F2B3250>, <db.models.Post object at 0x000001DF2F3A2AD0>]
+2023-06-23 15:39:28,133 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001DF2F3A2950>, <db.models.Post object at 0x000001DF2F3A2830>, <db.models.Post object at 0x000001DF2F3A2920>]
+2023-06-23 15:39:38,054 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001DF2F3A1F00>, <db.models.Post object at 0x000001DF2F3A21A0>, <db.models.Post object at 0x000001DF2F3A2F20>]
+2023-06-23 15:39:38,696 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001DF2F3A2140>, <db.models.Post object at 0x000001DF2F3A1D50>, <db.models.Post object at 0x000001DF2F3A3550>]
+2023-06-23 15:40:16,254 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001DF303E6620>, <db.models.Post object at 0x000001DF303E66B0>, <db.models.Post object at 0x000001DF303E6680>]
+2023-06-23 15:40:16,838 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001DF2F3A1A80>, <db.models.Post object at 0x000001DF2F3A3C40>, <db.models.Post object at 0x000001DF2F3A33D0>]
+2023-06-23 15:50:37,133 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
 	This probably means the server terminated abnormally
 	before or while processing the request.
 server closed the connection unexpectedly
@@ -211,9 +265,12 @@ FROM posts ORDER BY posts.timestamp DESC
  LIMIT %(param_1)s OFFSET %(param_2)s]
 [parameters: {'param_1': 3, 'param_2': 0}]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:42:19,792 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE23E0>, <db.models.Post object at 0x000002544CBE0100>, <db.models.Post object at 0x000002544CBE3940>]
-2023-06-04 13:45:06,797 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE29B0>, <db.models.Post object at 0x000002544CBE2830>, <db.models.Post object at 0x000002544CBE38E0>]
-2023-06-04 13:45:07,258 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
+2023-06-23 15:50:38,006 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A479990280>, <db.models.Post object at 0x000001A479990250>, <db.models.Post object at 0x000001A4799911E0>]
+2023-06-23 15:50:44,716 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A4799933A0>, <db.models.Post object at 0x000001A479993400>, <db.models.Post object at 0x000001A479993430>]
+2023-06-23 15:50:45,334 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A479992950>, <db.models.Post object at 0x000001A4799925C0>, <db.models.Post object at 0x000001A479991270>]
+2023-06-23 15:51:52,146 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A4799CDDE0>, <db.models.Post object at 0x000001A4799CDE40>, <db.models.Post object at 0x000001A4799CDE70>]
+2023-06-23 15:51:52,743 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A479992260>, <db.models.Post object at 0x000001A4799925C0>, <db.models.Post object at 0x000001A479993310>]
+2023-06-23 15:54:05,522 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
 	This probably means the server terminated abnormally
 	before or while processing the request.
 server closed the connection unexpectedly
@@ -225,458 +282,16 @@ FROM posts ORDER BY posts.timestamp DESC
  LIMIT %(param_1)s OFFSET %(param_2)s]
 [parameters: {'param_1': 3, 'param_2': 0}]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:45:25,108 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CA631F0>, <db.models.Post object at 0x000002544CBB77F0>, <db.models.Post object at 0x000002544CBB7490>]
-2023-06-04 13:45:26,280 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CB8A3B0>, <db.models.Post object at 0x000002544CB8AE30>, <db.models.Post object at 0x000002544CB893C0>]
-2023-06-04 13:48:14,991 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:48:15,810 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE0490>, <db.models.Post object at 0x000002544CBE1900>, <db.models.Post object at 0x000002544CBE0A60>]
-2023-06-04 13:48:21,904 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE0820>, <db.models.Post object at 0x000002544CBE2590>, <db.models.Post object at 0x000002544CBE2920>]
-2023-06-04 13:48:22,489 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE2CB0>, <db.models.Post object at 0x000002544CBE0490>, <db.models.Post object at 0x000002544CBE3190>]
-2023-06-04 13:48:57,245 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:48:58,259 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE2020>, <db.models.Post object at 0x000002544CBE3C10>, <db.models.Post object at 0x000002544CBE2D40>]
-2023-06-04 13:49:25,205 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC6020>, <db.models.Post object at 0x000002544CBC7910>, <db.models.Post object at 0x000002544CBC7E50>]
-2023-06-04 13:49:25,823 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CB88BB0>, <db.models.Post object at 0x000002544CB88B50>, <db.models.Post object at 0x000002544CB89810>]
-2023-06-04 13:50:35,378 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:50:36,154 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE2A10>, <db.models.Post object at 0x000002544CBE0340>, <db.models.Post object at 0x000002544CBE0220>]
-2023-06-04 13:51:17,075 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE1C30>, <db.models.Post object at 0x000002544CBE01F0>, <db.models.Post object at 0x000002544CBE17B0>]
-2023-06-04 13:51:17,529 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:51:24,113 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBD7EB0>, <db.models.Post object at 0x000002544CBD6680>, <db.models.Post object at 0x000002544CBD43D0>]
-2023-06-04 13:51:25,260 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE32B0>, <db.models.Post object at 0x000002544CBE1DE0>, <db.models.Post object at 0x000002544CBE0670>]
-2023-06-04 13:51:31,022 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB77F0>, <db.models.Post object at 0x000002544CBB7A90>, <db.models.Post object at 0x000002544CBB4220>]
-2023-06-04 13:51:34,190 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 13:52:07,989 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 13:52:08,748 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CB492A0>, <db.models.Post object at 0x000002544CB48EB0>, <db.models.Post object at 0x000002544CB494B0>]
-2023-06-04 13:52:16,890 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE41F0>, <db.models.Post object at 0x000002544CBE4040>, <db.models.Post object at 0x000002544CBE4130>]
-2023-06-04 13:52:19,998 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 14:19:14,051 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 14:19:14,940 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE3520>, <db.models.Post object at 0x000002544CBE0FA0>, <db.models.Post object at 0x000002544CBE07C0>]
-2023-06-04 19:01:58,630 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBC7F70>, <db.models.Post object at 0x000002544CBC63B0>, <db.models.Post object at 0x000002544CBC6D70>]
-2023-06-04 19:02:34,373 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 6}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 19:02:43,014 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBD73A0>, <db.models.Post object at 0x000002544CBD4C70>, <db.models.Post object at 0x000002544CBD5F90>]
-2023-06-04 19:02:44,071 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE0640>, <db.models.Post object at 0x000002544CBE3F10>, <db.models.Post object at 0x000002544CBE2050>]
-2023-06-04 19:03:03,624 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE14E0>, <db.models.Post object at 0x000002544CBE0B80>, <db.models.Post object at 0x000002544CBE01F0>]
-2023-06-04 19:03:06,414 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 19:03:29,220 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBD5630>, <db.models.Post object at 0x000002544CBD5210>, <db.models.Post object at 0x000002544CBD4580>]
-2023-06-04 19:03:29,810 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE1390>, <db.models.Post object at 0x000002544CBE1C60>, <db.models.Post object at 0x000002544CBE1C90>]
-2023-06-04 19:03:31,762 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBD5C00>, <db.models.Post object at 0x000002544CBD4D30>, <db.models.Post object at 0x000002544CBD4640>]
-2023-06-04 19:03:33,810 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 19:06:17,692 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 19:06:18,745 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBD4340>, <db.models.Post object at 0x000002544CBD5ED0>, <db.models.Post object at 0x000002544CBD52A0>]
-2023-06-04 19:11:56,193 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB41F0>, <db.models.Post object at 0x000002544CBB71C0>, <db.models.Post object at 0x000002544CBB70D0>]
-2023-06-04 19:11:56,606 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 19:12:25,233 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB6350>, <db.models.Post object at 0x000002544CBB7670>, <db.models.Post object at 0x000002544CBB70A0>]
-2023-06-04 19:12:26,423 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBD63B0>, <db.models.Post object at 0x000002544CBD6AA0>, <db.models.Post object at 0x000002544CBD4A00>]
-2023-06-04 19:18:26,228 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 19:18:26,963 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE1810>, <db.models.Post object at 0x000002544CBE2E30>, <db.models.Post object at 0x000002544CBE2530>]
-2023-06-04 19:18:30,106 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE0C10>, <db.models.Post object at 0x000002544CBE0FA0>, <db.models.Post object at 0x000002544CBE36D0>]
-2023-06-04 19:18:32,503 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 19:20:20,538 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 6}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 19:20:50,609 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE0970>, <db.models.Post object at 0x000002544CBE3FD0>, <db.models.Post object at 0x000002544CBE1BA0>]
-2023-06-04 19:20:51,703 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBD7280>, <db.models.Post object at 0x000002544CBD5ED0>, <db.models.Post object at 0x000002544CBD6AA0>]
-2023-06-04 19:20:53,560 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBD72E0>, <db.models.Post object at 0x000002544CBD5210>, <db.models.Post object at 0x000002544CBD5330>]
-2023-06-04 19:20:55,271 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 19:21:05,341 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 19:21:26,659 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 19:21:59,004 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 19:21:59,898 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE4460>, <db.models.Post object at 0x000002544CBE50C0>, <db.models.Post object at 0x000002544CBE5720>]
-2023-06-04 19:24:19,083 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE4E50>, <db.models.Post object at 0x000002544CBE5510>, <db.models.Post object at 0x000002544CBE5450>]
-2023-06-04 19:24:19,481 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-04 19:25:01,033 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CB89E70>, <db.models.Post object at 0x000002544CB895D0>, <db.models.Post object at 0x000002544CB88670>]
-2023-06-04 19:25:07,855 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBB70A0>, <db.models.Post object at 0x000002544CBB4EB0>, <db.models.Post object at 0x000002544CBB7970>]
-2023-06-04 19:25:08,469 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBD4790>, <db.models.Post object at 0x000002544CBD7340>, <db.models.Post object at 0x000002544CBD45E0>]
-2023-06-04 19:25:11,746 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBD56C0>, <db.models.Post object at 0x000002544CBD48B0>, <db.models.Post object at 0x000002544CBD7760>]
-2023-06-04 19:25:15,296 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-04 19:25:31,108 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE3FA0>, <db.models.Post object at 0x000002544CBE06A0>, <db.models.Post object at 0x000002544CBE3CA0>]
-2023-06-04 19:25:31,685 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE6440>, <db.models.Post object at 0x000002544CBE6230>, <db.models.Post object at 0x000002544CBE4910>]
-2023-06-04 19:25:37,331 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x000002544CBE49D0>, <db.models.Post object at 0x000002544CBE4BB0>, <db.models.Post object at 0x000002544CBE6890>]
-2023-06-04 19:25:39,438 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-07 10:45:26,630 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F901B5720>, <db.models.Post object at 0x0000023F901B6620>, <db.models.Post object at 0x0000023F901B6500>]
-2023-06-07 10:45:27,840 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F901B52A0>, <db.models.Post object at 0x0000023F901B4910>, <db.models.Post object at 0x0000023F901B4C10>]
-2023-06-07 10:51:25,268 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 3}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-07 10:51:53,611 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F901FA110>, <db.models.Post object at 0x0000023F901FA170>, <db.models.Post object at 0x0000023F901FA1A0>]
-2023-06-07 10:51:54,747 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F901F8A00>, <db.models.Post object at 0x0000023F901F9930>, <db.models.Post object at 0x0000023F901F8940>]
-2023-06-07 10:51:57,123 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F901F9510>, <db.models.Post object at 0x0000023F901FA320>, <db.models.Post object at 0x0000023F901FA7A0>]
-2023-06-07 10:51:59,786 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-07 10:53:37,984 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-07 10:53:39,035 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021D240>, <db.models.Post object at 0x0000023F9021D2A0>, <db.models.Post object at 0x0000023F9021D2D0>]
-2023-06-07 10:55:09,300 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021DED0>, <db.models.Post object at 0x0000023F9021DF30>, <db.models.Post object at 0x0000023F9021DF60>]
-2023-06-07 10:55:36,519 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-07 11:12:50,985 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F901FB0D0>, <db.models.Post object at 0x0000023F901F8940>, <db.models.Post object at 0x0000023F901FA050>]
-2023-06-07 11:12:52,164 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F901B57B0>, <db.models.Post object at 0x0000023F901B5900>, <db.models.Post object at 0x0000023F901B6680>]
-2023-06-07 11:13:20,798 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F900D3EE0>, <db.models.Post object at 0x0000023F900D3E80>, <db.models.Post object at 0x0000023F901B6500>]
-2023-06-07 11:19:32,998 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-07 11:19:33,869 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021C2E0>, <db.models.Post object at 0x0000023F9021C340>, <db.models.Post object at 0x0000023F9021C370>]
-2023-06-07 12:25:06,059 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021F280>, <db.models.Post object at 0x0000023F9021F2E0>, <db.models.Post object at 0x0000023F9021F310>]
-2023-06-07 12:25:06,507 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-07 12:25:13,819 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021EB60>, <db.models.Post object at 0x0000023F9021CEE0>, <db.models.Post object at 0x0000023F9021C8E0>]
-2023-06-07 12:25:15,008 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021E110>, <db.models.Post object at 0x0000023F9021E0B0>, <db.models.Post object at 0x0000023F9021EB30>]
-2023-06-07 12:25:25,405 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021D090>, <db.models.Post object at 0x0000023F9021EB30>, <db.models.Post object at 0x0000023F9021C070>]
-2023-06-07 12:25:26,045 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021DA20>, <db.models.Post object at 0x0000023F9021D990>, <db.models.Post object at 0x0000023F9021EA40>]
-2023-06-07 12:25:40,673 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F901FB130>, <db.models.Post object at 0x0000023F901F9450>, <db.models.Post object at 0x0000023F901F9ED0>]
-2023-06-07 12:25:41,334 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F901F8A30>, <db.models.Post object at 0x0000023F901FA620>, <db.models.Post object at 0x0000023F901F8160>]
-2023-06-07 12:25:44,502 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F901FA290>, <db.models.Post object at 0x0000023F901F9A50>, <db.models.Post object at 0x0000023F901FB5E0>]
-2023-06-07 12:25:45,149 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F901FAEC0>, <db.models.Post object at 0x0000023F901F99C0>, <db.models.Post object at 0x0000023F901FA260>]
-2023-06-07 12:25:46,941 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021DCF0>, <db.models.Post object at 0x0000023F9021CF70>, <db.models.Post object at 0x0000023F9021DB70>]
-2023-06-07 12:25:48,966 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-07 17:05:26,870 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-07 17:05:27,756 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F90230610>, <db.models.Post object at 0x0000023F90230670>, <db.models.Post object at 0x0000023F902306A0>]
-2023-06-07 17:05:31,944 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021E290>, <db.models.Post object at 0x0000023F9021D840>, <db.models.Post object at 0x0000023F9021C4F0>]
-2023-06-07 17:05:32,571 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021C3D0>, <db.models.Post object at 0x0000023F9021FA30>, <db.models.Post object at 0x0000023F9021D9F0>]
-2023-06-07 17:05:34,719 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021FA00>, <db.models.Post object at 0x0000023F9021E830>, <db.models.Post object at 0x0000023F9021C370>]
-2023-06-07 17:05:36,438 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-07 17:06:37,770 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-07 17:06:38,631 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F90230EB0>, <db.models.Post object at 0x0000023F90230F10>, <db.models.Post object at 0x0000023F90230F40>]
-2023-06-07 17:06:48,699 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021D210>, <db.models.Post object at 0x0000023F9021EA40>, <db.models.Post object at 0x0000023F9021C8E0>]
-2023-06-07 17:06:49,312 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021C4F0>, <db.models.Post object at 0x0000023F9021CD90>, <db.models.Post object at 0x0000023F9021D3C0>]
-2023-06-07 17:06:53,405 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021F340>, <db.models.Post object at 0x0000023F9021FE80>, <db.models.Post object at 0x0000023F9021F280>]
-2023-06-07 17:06:55,244 SpawnProcess-1 - db_post.py:47 - INFO []
-2023-06-07 17:07:02,016 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021ECE0>, <db.models.Post object at 0x0000023F9021C8B0>, <db.models.Post object at 0x0000023F9021C250>]
-2023-06-07 17:07:02,615 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021DDE0>, <db.models.Post object at 0x0000023F9021CAF0>, <db.models.Post object at 0x0000023F9021F700>]
-2023-06-07 17:07:04,913 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021D090>, <db.models.Post object at 0x0000023F9021FA60>]
-2023-06-07 17:25:26,665 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-07 17:25:27,768 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F90232770>, <db.models.Post object at 0x0000023F902327D0>, <db.models.Post object at 0x0000023F90232800>]
-2023-06-07 17:25:45,660 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F90233490>, <db.models.Post object at 0x0000023F90231720>, <db.models.Post object at 0x0000023F90231750>]
-2023-06-07 17:25:46,309 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021C2E0>, <db.models.Post object at 0x0000023F9021CDF0>, <db.models.Post object at 0x0000023F9021EA40>]
-2023-06-07 17:25:52,021 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F901FB070>, <db.models.Post object at 0x0000023F901F9DE0>, <db.models.Post object at 0x0000023F901F83A0>]
-2023-06-07 17:25:52,951 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F9021CB20>, <db.models.Post object at 0x0000023F9021E470>, <db.models.Post object at 0x0000023F9021CE50>]
-2023-06-07 17:31:20,277 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F902338B0>, <db.models.Post object at 0x0000023F90232EC0>, <db.models.Post object at 0x0000023F90231780>]
-2023-06-07 17:31:21,020 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F901B5D80>, <db.models.Post object at 0x0000023F901B54E0>, <db.models.Post object at 0x0000023F901B57B0>]
-2023-06-07 17:33:45,229 SpawnProcess-1 - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-07 17:33:46,084 SpawnProcess-1 - db_post.py:47 - INFO [<db.models.Post object at 0x0000023F90231540>, <db.models.Post object at 0x0000023F90232D40>, <db.models.Post object at 0x0000023F902310C0>]
-2023-06-18 21:27:40,324 MainProcess - db_post.py:47 - INFO [<db.models.Post object at 0x00000285F82DD6F0>, <db.models.Post object at 0x00000285F82DD690>, <db.models.Post object at 0x00000285F82DD510>]
-2023-06-18 21:27:42,433 MainProcess - db_post.py:47 - INFO [<db.models.Post object at 0x00000285F803A350>, <db.models.Post object at 0x00000285F803A2C0>, <db.models.Post object at 0x00000285F803A8C0>]
-2023-06-18 21:34:16,385 MainProcess - db_post.py:51 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 3}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-18 21:53:47,136 MainProcess - db_post.py:47 - INFO [<db.models.Post object at 0x00000285F83199F0>, <db.models.Post object at 0x00000285F8319C00>, <db.models.Post object at 0x00000285F8319C30>]
-2023-06-18 21:53:48,108 MainProcess - db_post.py:47 - INFO [<db.models.Post object at 0x00000285F8319420>, <db.models.Post object at 0x00000285F8319600>, <db.models.Post object at 0x00000285F8319720>]
-2023-06-18 21:53:49,757 MainProcess - db_post.py:47 - INFO [<db.models.Post object at 0x00000285F7FE68F0>, <db.models.Post object at 0x00000285F7FE6860>]
-2023-06-18 22:12:23,663 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-18 22:12:24,502 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001BCA2A43100>, <db.models.Post object at 0x000001BCA2A42DA0>, <db.models.Post object at 0x000001BCA2A439D0>]
-2023-06-18 22:12:26,232 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001BCA2A86110>, <db.models.Post object at 0x000001BCA2A86230>]
-2023-06-18 22:17:23,566 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-18 22:17:24,742 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001BCA2A86230>, <db.models.Post object at 0x000001BCA2A86290>, <db.models.Post object at 0x000001BCA2A85870>]
-2023-06-18 22:17:36,179 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001BCA2AAC100>, <db.models.Post object at 0x000001BCA2AAC9A0>, <db.models.Post object at 0x000001BCA2AAC220>]
-2023-06-18 22:17:37,432 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001BCA2AAD9C0>, <db.models.Post object at 0x000001BCA2AAD960>, <db.models.Post object at 0x000001BCA2AAD990>]
-2023-06-18 22:17:45,804 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001BCA2AAE9E0>, <db.models.Post object at 0x000001BCA2AAEB00>]
-2023-06-18 22:18:11,666 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 3}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-18 22:20:01,936 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001BCA2AAE2C0>, <db.models.Post object at 0x000001BCA2AADF00>, <db.models.Post object at 0x000001BCA2AAC5B0>]
-2023-06-18 22:20:02,566 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001BCA2AAECB0>, <db.models.Post object at 0x000001BCA2AAF370>, <db.models.Post object at 0x000001BCA2AAD000>]
-2023-06-18 22:20:04,344 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001BCA2AAE6E0>, <db.models.Post object at 0x000001BCA2AAEF20>]
-2023-06-18 22:25:29,081 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001F00512DED0>, <db.models.Post object at 0x000001F00512E080>, <db.models.Post object at 0x000001F00512E050>]
-2023-06-18 22:25:30,559 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001F00512D120>, <db.models.Post object at 0x000001F00512C070>, <db.models.Post object at 0x000001F00512D4B0>]
-2023-06-18 22:25:36,343 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001F005175F30>, <db.models.Post object at 0x000001F005176320>]
-2023-06-18 22:26:06,009 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-18 22:26:06,856 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001F0051918D0>, <db.models.Post object at 0x000001F005191930>, <db.models.Post object at 0x000001F005191960>]
-2023-06-18 22:26:11,182 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001F0051925F0>, <db.models.Post object at 0x000001F005192710>]
-2023-06-18 22:27:34,736 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
-FROM posts ORDER BY posts.timestamp DESC 
- LIMIT %(param_1)s OFFSET %(param_2)s]
-[parameters: {'param_1': 3, 'param_2': 0}]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-2023-06-18 22:27:35,723 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001F0051B0130>, <db.models.Post object at 0x000001F0051B0190>, <db.models.Post object at 0x000001F0051B01C0>]
-2023-06-18 22:27:39,360 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001F005191E70>, <db.models.Post object at 0x000001F005190FA0>]
-2023-06-18 22:28:44,434 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001F005083190>, <db.models.Post object at 0x000001F0050829B0>, <db.models.Post object at 0x000001F005083F40>]
-2023-06-18 22:28:45,582 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001F005192A10>, <db.models.Post object at 0x000001F005193EB0>, <db.models.Post object at 0x000001F005191600>]
-2023-06-18 22:28:46,737 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001F005191ED0>, <db.models.Post object at 0x000001F005191AB0>]
+2023-06-23 15:54:06,345 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A4799CF1F0>, <db.models.Post object at 0x000001A4799CF250>, <db.models.Post object at 0x000001A4799CF280>]
+2023-06-23 15:54:10,789 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A4799CD4B0>, <db.models.Post object at 0x000001A4799CE5C0>, <db.models.Post object at 0x000001A4799CD750>]
+2023-06-23 15:54:29,183 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A4799DCEE0>, <db.models.Post object at 0x000001A4799DCF10>, <db.models.Post object at 0x000001A4799DC700>]
+2023-06-23 15:54:29,779 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000001A4799DC9D0>, <db.models.Post object at 0x000001A4799DCA00>, <db.models.Post object at 0x000001A4799DC550>]
+2023-06-23 15:55:43,899 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023029BB6E00>, <db.models.Post object at 0x0000023029BB79D0>, <db.models.Post object at 0x0000023029BB7130>]
+2023-06-23 15:55:45,037 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023029BB5510>, <db.models.Post object at 0x0000023029BB6080>, <db.models.Post object at 0x0000023029BB4A00>]
+2023-06-23 15:55:47,117 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023029C12470>, <db.models.Post object at 0x0000023029C122F0>, <db.models.Post object at 0x0000023029C122C0>]
+2023-06-23 15:55:56,112 MainProcess - db_post.py:46 - INFO []
+2023-06-23 15:57:02,010 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023029C29300>, <db.models.Post object at 0x0000023029C2AA70>, <db.models.Post object at 0x0000023029C2A560>]
+2023-06-23 15:57:02,430 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023029C50310>, <db.models.Post object at 0x0000023029C50B80>, <db.models.Post object at 0x0000023029C500D0>]
+2023-06-23 15:57:03,010 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023029C2A890>, <db.models.Post object at 0x0000023029C2A830>, <db.models.Post object at 0x0000023029C29870>]
+2023-06-23 15:57:06,487 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023029C50E50>, <db.models.Post object at 0x0000023029C50310>, <db.models.Post object at 0x0000023029C51090>]
+2023-06-23 15:57:07,119 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000023029C2A080>, <db.models.Post object at 0x0000023029C29AE0>, <db.models.Post object at 0x0000023029C29E10>]

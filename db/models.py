@@ -7,9 +7,10 @@ from .database import Base
 class User(Base):
     __tablename__ = "users"
     id = Column(Integer, nullable=False, primary_key=True, index=True)
-    username = Column(String, nullable=False)
+    username = Column(String, nullable=False, unique=True)
     email = Column(String, nullable=False, unique=True)
     password = Column(String, nullable=False)
+    profile_img = Column(String, nullable=True)
 
     items = relationship("Post", back_populates="user")
 

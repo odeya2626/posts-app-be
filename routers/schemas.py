@@ -8,7 +8,8 @@ from pydantic import BaseModel
 class UserBase(BaseModel):
     username: str
     email: str
-    password: str
+    password: str = None
+    profile_img: str = None
 
     class Config:
         orm_mode = True
@@ -18,6 +19,7 @@ class UserDisplay(BaseModel):
     username: str
     email: str
     password: str
+    profile_img: str = None
 
     class Config:
         orm_mode = True
@@ -45,6 +47,7 @@ class CommentDisplay(BaseModel):
 # for PostDisplay
 class User(BaseModel):
     username: str
+    profile_img: str = None
 
     class Config:
         orm_mode = True
@@ -69,6 +72,7 @@ class UserAuth(BaseModel):
     id: int
     username: str
     email: str
+    profile_img: str = None
 
 
 class CommentBase(BaseModel):
