@@ -1,12 +1,13 @@
 import sys
+
 sys.path.append(".")
-import json
-import pytest
-from .fixtures import client, app, db_session
+
 from fastapi.testclient import TestClient
 
+from .fixtures import app, client, db_session
 
-def test_create_user(client: TestClient)->None:
+
+def test_create_user(client: TestClient) -> None:
     response = client.post(
         "/user/register",
         json={
@@ -17,6 +18,3 @@ def test_create_user(client: TestClient)->None:
     )
     assert response.status_code == 201
     assert response.json()["email"] == "test@test.com"
-
-
- 

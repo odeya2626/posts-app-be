@@ -59,7 +59,6 @@ def create_user(db: Session, request: UserBase):
 
 def get_user_by_username(db: Session, username: str):
     user = db.query(User).filter(User.username == username).first()
-    print("userget", user)
     if not user:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -69,7 +68,6 @@ def get_user_by_username(db: Session, username: str):
 
 
 def update_user_model(db: Session, request: UserBase, user: User):
-    print("user", user)
     if request.username != user.username:
         used_username = db.query(User).filter(User.username == request.username).first()
         if used_username:

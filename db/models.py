@@ -32,7 +32,7 @@ class Post(Base):
     timestamp = Column(DateTime)
 
     user = relationship("User", back_populates="items")
-    comments = relationship("Comment", back_populates="post")
+    comments = relationship("Comment", back_populates="post", cascade="all, delete")
 
 
 class Comment(Base):

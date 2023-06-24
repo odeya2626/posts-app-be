@@ -315,3 +315,29 @@ FROM posts ORDER BY posts.timestamp DESC
 2023-06-23 18:16:54,364 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE63760>, <db.models.Post object at 0x0000026AFFE63700>, <db.models.Post object at 0x0000026AFFE636D0>]
 2023-06-23 18:16:55,011 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE61C30>, <db.models.Post object at 0x0000026AFFE609D0>, <db.models.Post object at 0x0000026AFFE63E50>]
 2023-06-23 18:16:57,146 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE61F00>, <db.models.Post object at 0x0000026AFFE61780>]
+2023-06-23 18:52:09,390 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
+FROM posts ORDER BY posts.timestamp DESC 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 3, 'param_2': 0}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-06-23 18:52:10,227 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE63310>, <db.models.Post object at 0x0000026AFFE633D0>, <db.models.Post object at 0x0000026AFFE633A0>]
+2023-06-23 18:52:18,051 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE99D50>, <db.models.Post object at 0x0000026AFFE9AA10>, <db.models.Post object at 0x0000026AFFE99E40>]
+2023-06-23 18:52:18,629 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE63070>, <db.models.Post object at 0x0000026AFFE63010>, <db.models.Post object at 0x0000026AFFE63F10>]
+2023-06-23 18:52:36,616 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE98430>, <db.models.Post object at 0x0000026AFFE98A30>, <db.models.Post object at 0x0000026AFFE99C00>]
+2023-06-23 18:52:37,205 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE9B9D0>, <db.models.Post object at 0x0000026AFFE9B370>, <db.models.Post object at 0x0000026AFFE9B640>]
+2023-06-23 18:52:40,952 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE60F70>, <db.models.Post object at 0x0000026AFFE62AD0>]
+2023-06-23 18:57:17,947 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE9B520>, <db.models.Post object at 0x0000026AFFE9AF80>, <db.models.Post object at 0x0000026AFFE9AFB0>]
+2023-06-23 18:57:18,523 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE9B6D0>, <db.models.Post object at 0x0000026AFFE9A080>, <db.models.Post object at 0x0000026AFFE9BF40>]
+2023-06-23 18:57:25,731 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE63CD0>, <db.models.Post object at 0x0000026AFFE63AC0>, <db.models.Post object at 0x0000026AFFE60250>]
+2023-06-23 18:57:26,321 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE98640>, <db.models.Post object at 0x0000026AFFE9A530>, <db.models.Post object at 0x0000026AFFE9A740>]
+2023-06-23 18:57:34,004 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE9AFE0>, <db.models.Post object at 0x0000026AFFE9A1D0>, <db.models.Post object at 0x0000026AFFE98FD0>]
+2023-06-23 18:57:34,572 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE9A980>, <db.models.Post object at 0x0000026AFFE9B820>, <db.models.Post object at 0x0000026AFFE98A60>]
+2023-06-23 18:58:51,386 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE9B730>, <db.models.Post object at 0x0000026AFFE9B040>, <db.models.Post object at 0x0000026AFFE98A00>]
+2023-06-23 18:58:51,971 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE634F0>, <db.models.Post object at 0x0000026AFFE634C0>, <db.models.Post object at 0x0000026AFFE62770>]
