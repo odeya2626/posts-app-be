@@ -14,6 +14,7 @@ def create(db: Session, request: CommentBase):
             username=request.username,
             timestamp=datetime.now(),
         )
+
         db.add(new_comment)
         db.commit()
         db.refresh(new_comment)

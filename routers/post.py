@@ -26,7 +26,6 @@ def create_post(
     db: Session = Depends(get_db),
     current_user: UserAuth = Depends(get_current_user),
 ):
-    print("current user id", current_user.id)
     try:
         PostBase(**request.dict())
         creator_username = db.query(User).filter(User.id == request.creator_id).first()
@@ -71,7 +70,6 @@ def get_all_posts(db: Session = Depends(get_db)):
 def upload_image(
     image: UploadFile = File(...), current_user: UserAuth = Depends(get_current_user)
 ):
-    print("image")
     image_name: Optional[str] = image.filename
     timestamp: str = datetime.now().strftime("%Y%m%d%H%M%S")
     filename: str = f"{timestamp}_{image_name}"
@@ -92,11 +90,11 @@ def upload_image(
         height=upload_result["height"],
         crop="fill",
     )
-    print("url", url)
+
     return {"filename": url}
 
 
-@router.delete("/delete/{id}")
+@router.delete("/{id}")
 def delete_post(
     id: int,
     db: Session = Depends(get_db),

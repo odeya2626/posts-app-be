@@ -12,12 +12,9 @@ def get_all_post_comments(post_id: int, db: Session = Depends(get_db)):
     return get_by_post(db, post_id)
 
 
-@router.post(
-    "/create", status_code=status.HTTP_201_CREATED, response_model=CommentDisplay
-)
+@router.post("/", status_code=status.HTTP_201_CREATED, response_model=CommentDisplay)
 def create_comment(request: CommentBase, db: Session = Depends(get_db)):
     try:
-        print(request)
         new_comment = create(db, request)
         return new_comment
     except:
