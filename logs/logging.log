@@ -341,3 +341,52 @@ FROM posts ORDER BY posts.timestamp DESC
 2023-06-23 18:57:34,572 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE9A980>, <db.models.Post object at 0x0000026AFFE9B820>, <db.models.Post object at 0x0000026AFFE98A60>]
 2023-06-23 18:58:51,386 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE9B730>, <db.models.Post object at 0x0000026AFFE9B040>, <db.models.Post object at 0x0000026AFFE98A00>]
 2023-06-23 18:58:51,971 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x0000026AFFE634F0>, <db.models.Post object at 0x0000026AFFE634C0>, <db.models.Post object at 0x0000026AFFE62770>]
+2023-06-25 12:58:21,106 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E3326B4550>, <db.models.Post object at 0x000002E3326B45E0>, <db.models.Post object at 0x000002E3326B4610>]
+2023-06-25 12:58:22,205 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E3326629B0>, <db.models.Post object at 0x000002E3326608E0>, <db.models.Post object at 0x000002E332662D40>]
+2023-06-25 12:58:33,454 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E3326F43D0>, <db.models.Post object at 0x000002E3326F4430>, <db.models.Post object at 0x000002E3326F4460>]
+2023-06-25 12:58:34,142 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E3326B7D00>, <db.models.Post object at 0x000002E3326B4BE0>, <db.models.Post object at 0x000002E3326B7010>]
+2023-06-25 12:58:41,061 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E3326F4A90>, <db.models.Post object at 0x000002E3326F4AF0>, <db.models.Post object at 0x000002E3326F4B20>]
+2023-06-25 12:58:41,652 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E3326B7880>, <db.models.Post object at 0x000002E3326B71F0>, <db.models.Post object at 0x000002E3326B7CA0>]
+2023-06-25 12:59:07,419 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E3326F70D0>, <db.models.Post object at 0x000002E3326F7070>, <db.models.Post object at 0x000002E3326F6CB0>]
+2023-06-25 12:59:08,029 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E3326F6EF0>, <db.models.Post object at 0x000002E3326F4880>, <db.models.Post object at 0x000002E3326F5E10>]
+2023-06-25 12:59:24,515 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E3337443D0>, <db.models.Post object at 0x000002E333744430>, <db.models.Post object at 0x000002E333744460>]
+2023-06-25 12:59:25,117 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E3326F5DE0>, <db.models.Post object at 0x000002E3326F63B0>, <db.models.Post object at 0x000002E3326F5990>]
+2023-06-25 12:59:37,024 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E333744C40>, <db.models.Post object at 0x000002E333744CA0>, <db.models.Post object at 0x000002E333744CD0>]
+2023-06-25 12:59:40,025 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E333746440>]
+2023-06-25 12:59:53,365 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E333745240>, <db.models.Post object at 0x000002E333745630>, <db.models.Post object at 0x000002E333745600>]
+2023-06-25 12:59:53,968 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E3337462C0>, <db.models.Post object at 0x000002E3337458A0>, <db.models.Post object at 0x000002E3337447F0>]
+2023-06-25 12:59:56,472 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E333744F70>, <db.models.Post object at 0x000002E333746470>, <db.models.Post object at 0x000002E333745AB0>]
+2023-06-25 12:59:57,070 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002E333744B80>, <db.models.Post object at 0x000002E333745090>, <db.models.Post object at 0x000002E333744520>]
+2023-06-25 13:23:50,617 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002183D876BC0>, <db.models.Post object at 0x000002183D877F40>, <db.models.Post object at 0x000002183D877FA0>]
+2023-06-25 13:23:51,713 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002183D875150>, <db.models.Post object at 0x000002183D875E70>, <db.models.Post object at 0x000002183D874910>]
+2023-06-25 13:23:53,887 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002183D8D61A0>, <db.models.Post object at 0x000002183D8D6080>, <db.models.Post object at 0x000002183D8D60B0>]
+2023-06-25 13:23:56,775 MainProcess - db_post.py:46 - INFO []
+2023-06-25 13:27:20,049 MainProcess - db_post.py:50 - ERROR (psycopg2.OperationalError) server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+[SQL: SELECT posts.id AS posts_id, posts.img_url AS posts_img_url, posts.img_url_type AS posts_img_url_type, posts.caption AS posts_caption, posts.creator_id AS posts_creator_id, posts.timestamp AS posts_timestamp 
+FROM posts ORDER BY posts.timestamp DESC 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 3, 'param_2': 0}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-06-25 13:27:20,755 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002183D8F66E0>, <db.models.Post object at 0x000002183D8F6740>, <db.models.Post object at 0x000002183D8F6770>]
+2023-06-25 13:27:26,695 MainProcess - db_post.py:46 - INFO []
+2023-06-25 13:27:36,168 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002183D826EF0>, <db.models.Post object at 0x000002183D8F5510>, <db.models.Post object at 0x000002183D8F55D0>]
+2023-06-25 13:27:36,796 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002183D8F6950>, <db.models.Post object at 0x000002183D8F5C00>, <db.models.Post object at 0x000002183D8F75B0>]
+2023-06-25 13:27:39,949 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002183D8F6320>, <db.models.Post object at 0x000002183D8F6470>, <db.models.Post object at 0x000002183D8F5D50>]
+2023-06-25 13:27:40,575 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002183D8F5930>, <db.models.Post object at 0x000002183D8F5960>, <db.models.Post object at 0x000002183D8F55D0>]
+2023-06-25 13:27:46,658 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002183D8F76A0>, <db.models.Post object at 0x000002183D8F68F0>, <db.models.Post object at 0x000002183D8F5810>]
+2023-06-25 13:27:47,273 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002183D8F66B0>, <db.models.Post object at 0x000002183D8F61A0>, <db.models.Post object at 0x000002183D8F6BC0>]
+2023-06-25 13:27:56,475 MainProcess - db_post.py:46 - INFO []
+2023-06-25 13:28:16,000 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002183D92DB40>, <db.models.Post object at 0x000002183D92DF30>, <db.models.Post object at 0x000002183D92DF60>]
+2023-06-25 13:28:16,613 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002183D92F2B0>, <db.models.Post object at 0x000002183D92EB00>, <db.models.Post object at 0x000002183D92E740>]
+2023-06-25 13:29:49,912 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002183D92FF40>, <db.models.Post object at 0x000002183D92EAA0>, <db.models.Post object at 0x000002183D92F550>]
+2023-06-25 13:29:50,492 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x000002183D92F340>, <db.models.Post object at 0x000002183D92EB90>, <db.models.Post object at 0x000002183D92E3E0>]
+2023-06-25 13:32:19,792 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000250DD8ACE50>, <db.models.Post object at 0x00000250DD8AF5E0>, <db.models.Post object at 0x00000250DD8AC880>]
+2023-06-25 13:32:20,400 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000250DD8ACEE0>, <db.models.Post object at 0x00000250DD8AEC80>, <db.models.Post object at 0x00000250DD8AC940>]
+2023-06-25 13:32:24,119 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000250DE8DFA00>, <db.models.Post object at 0x00000250DE8DFAC0>, <db.models.Post object at 0x00000250DE8DFA90>]
+2023-06-25 13:32:24,713 MainProcess - db_post.py:46 - INFO [<db.models.Post object at 0x00000250DD8ACDF0>, <db.models.Post object at 0x00000250DD8AFAC0>, <db.models.Post object at 0x00000250DD8AF970>]
